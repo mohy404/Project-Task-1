@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Layout</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <img src="./image/logo.svg" alt="logo"> 
+      <span>Logoipsm</span>
+    </div>
+    <ul>
+      <li class="active"><img src="./image/overview-icon.svg" alt="Overview"> Overview</li>
+      <li><img src="./image/charts-icon.svg" alt="Charts"> Charts</li>
+      <li><img src="./image/transactions-icon.svg" alt="Transactions"> Transactions</li>
+      <li><img src="./image/wallet-icon.svg" alt="Wallet"> Wallet</li>
+      <li><img src="./image/news-icon.svg" alt="News"> News</li>
+      <li><img src="./image/mailbox-icon.svg" alt="Mail Box"> Mail Box</li>
+      <li class="setting"><img src="./image/setting-icon.svg" alt="Setting"> Setting</li>
+      <li class="logout"><img src="./image/logout-icon.svg" alt="Logout"> Logout</li>
+    </ul>
+    
+  </div>
+  <!-- Your main content here -->
+  <div class="main-content">
+
+
+
+
+    <div class="header">
+      <div class="dashboard-title">Dashboard</div>
+      <div class="search-container">
+        <input style="color: #9E9E9E;" type="search" placeholder="Search...">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <div class="notification-bell">
+        <img src="./image/bell-icon.svg" alt="Notifications">
+      </div>
+
+      <div class="user-profile">
+        <img src="./image/user-avatar.svg" alt="User Name">
+
+        <div class="user-details">
+          <div class="user-name">Courtney Henry</div>
+          <i class="fas fa-chevron-down dropdown-arrow"></i>
+        </div>
+
+      </div>
+    </div>
+    
+
+
+    <div class="card-container">
+
+      <div class="currency-card">
+        <div class="card-header">
+          <img src="./image/bitcoin-icon.svg" alt="Bitcoin">
+          <div>
+            <h2>Bitcoin</h2>
+            <p>BTC</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>$52,291</p>
+          
+          <div class="price-change positive">+0.25%</div>
+          
+            <div class="progress-bar">
+          <img src="./image/bitcoin-chart.svg" alt="Bitcoin chart">
+        </div>
+        </div>
+      </div>
+
+      <div class="currency-card">
+        <div class="card-header">
+          <img src="./image/Litecoin-icon.svg" alt="Litecoin">
+          <div>
+            <h2>Litecoin</h2>
+            <p>ITC</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>$8,291</p>
+          <div class="price-change positive">+0.25%</div>
+          <div class="progress-bar">
+          <img src="./image/Litecoin-chart.svg" alt="Bitcoin chart">
+        </div>
+        </div>
+      </div>
+      <!-- Repeat the above block for each currency card (Litecoin, Ethereum, Solana) -->
+
+      <div class="currency-card">
+        <div class="card-header">
+          <img src="./image/Ethereum-icon.svg" alt="Ethereum">
+          <div>
+            <h2>Ethereum</h2>
+            <p>ETH</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>$28,291</p>
+          <div class="price-change positive">+0.25%</div>
+          <div class="progress-bar">
+          <img src="./image/bitcoin-chart.svg" alt="Bitcoin chart">
+        </div>
+        </div>
+      </div>
+
+      <div class="currency-card">
+        <div class="card-header">
+          <img src="./image/Solana-icon.svg" alt="Solana">
+          <div>
+            <h2>Solana</h2>
+            <p>SOL</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>$14,291</p>
+          <div class="price-change positive">+0.25%</div>
+          <div class="progress-bar">
+          <img src="./image/Solana-chart.svg" alt="Solana chart">
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+     
+    
+       
+      
+      <!-- Credit Card Component -->
+<div class="credit-card">
+  <div class="credit-card-header">
+    <h2 class="credit-card-title">Credit Card</h2>
+    <img src="./image/chip-icon.svg" alt="Chip" class="chip-icon">
+  </div>
+  <div class="credit-card-number">3475 7381 3759 4512</div>
+  <div class="credit-card-info">
+    <div class="credit-card-holder">
+      <p class="credit-card-holder-name">DARRELL STEWARD</p>
+    </div>
+    <div class="credit-card-brand">
+    
+      <span class="viza-text">VIZA</span>
+    </div>
+  </div>
+</div>
+
+      
+
+<!-- Chart Section -->
+<!-- Chart Section -->
+<div class="chart-container">
+  <div class="chart-header">
+    <span class="chart-title">Chart</span>
+    <div class="chart-currency">
+      <span class="currency-name">Bitcoin/BTC - </span>
+      <span class="currency-value">$35,352.02</span>
+    </div>
+    <div class="chart-timeframes">
+      <button class="timeframe active">1h</button>
+      <button class="timeframe">3h</button>
+      <button class="timeframe">1d</button>
+      <button class="timeframe">1w</button>
+      <button class="timeframe">1m</button>
+    </div>
+    <div class="currency-toggle">
+      <button class="currency-button active">USD</button>
+    </div>
+  </div>
+  <div class="chart-axis-labels">
+    <div class="y-axis">
+      <span>50,000</span>
+      <span>40,000</span>
+      <span>30,000</span>
+      <span>20,000</span>
+      <span>10,000</span>
+      <span>0</span>
+    </div>
+  </div>
+  <div class="chart-body">
+    <img src="./image/chart-image.svg" alt="Bitcoin Chart" />
+    <div class="x-axis">
+      <span>19:00</span>
+      <span>19:10</span>
+      <span>19:20</span>
+      <span>19:30</span>
+      <span>19:40</span>
+      <span>19:50</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- لقسم المحفظة (My Portfolio) -->
+<div class="portfolio-container">
+  <h2>My Portfolio</h2>
+  <!-- تكرار لكل عملة في المحفظة -->
+  <div class="portfolio-item">
+    <span>Ethereum</span>
+    <span>0.12453 ETH</span>
+    <span>-13.40%</span>
+  </div>
+  <!-- إضافة المزيد من العملات -->
+</div>
+
+<!-- للسوق الحي (Live Market) -->
+<div class="live-market-container">
+  <h2>Live Market</h2>
+  <div class="market-item">
+    <span>Bitcoin</span>
+    <span>+12.00%</span>
+    <span>$3.560M</span>
+  </div>
+  <!-- إضافة المزيد من العملات -->
+</div>
+
+      
+
+
+    </div>
+
+
+    <!-- Additional content for credit card, portfolio, live market, chart, etc. -->
+
+
+
+  </div>
+
+
+</body>
+</html>

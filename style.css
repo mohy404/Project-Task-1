@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #31353f;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 256px;
+  background-color: #1b2028;
+  max-height: 10;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  text-align: center;
+  padding: 20px 0;
+  display: flex; /* Aligns the image and text side by side */
+  justify-content: center; /* Centers them in the sidebar */
+  align-items: center; /* Aligns them vertically */
+}
+
+.sidebar-logo img {
+  max-width: 50%; /* To not exceed the sidebar width, adjust as needed */
+  height: auto; /* To maintain the aspect ratio */
+}
+
+.sidebar-logo span {
+  color: white; /* Ensures the text is visible against a dark background */
+  margin-left: 10px; /* Adds space between the logo image and the text */
+  font-size: larger;
+  font: 700;
+  font-family: inherit;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin-top: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.sidebar ul li {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 20px;
+}
+
+.sidebar ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* To vertically align the images with the text */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  background-color: #3a6ff8;
+  cursor: pointer;
+}
+
+.sidebar ul li.active {
+  background-color: #3a6ff8; /* Active state color */
+}
+
+/* Specifically target the 'Setting' and 'Logout' list items */
+.sidebar ul li.setting,
+.sidebar ul li.logout {
+  margin-top: auto;
+  background-color: #252526;
+}
+
+.sidebar ul li:not(.active):not(:hover) {
+  background-color: transparent;
+}
+
+.sidebar ul li.logout {
+  margin-top: 10px;
+}
+
+
+/* Header Section */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.header .dashboard-title {
+  font-size: 24px; 
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.header .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header .search-container input[type="search"] {
+  width: 450px;
+  height: 44px;
+  background-color: #1b2028;
+  padding: 8px 16px;
+  margin-right: 8px; /* Adds space between the search box and the profile */
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-container i.fas.fa-search {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  top: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9e9e9e;
+  cursor: pointer;
+}
+
+.notification-bell {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #1B2028;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+  }
+  
+  .notification-bell img {
+    height: 24px; 
+    width: auto; 
+    cursor: pointer;
+  }
+
+.header .user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer; 
+}
+
+.header .user-profile img {
+  border-radius: 20%; 
+  width: 44px; 
+  height: 44px; 
+  margin-right: 15px; 
+}
+
+.header .user-profile .user-name {
+  font-weight: bold;
+  
+}
+
+
+.user-details {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .user-details .user-name {
+    margin-right: 60px;
+    
+  }
+  
+  .user-details .dropdown-arrow {
+    font-size: 12px; 
+    color: #9E9E9E; 
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  
+
+  /* =================================================================*/
+
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a four-column grid */
+    gap: 1rem; /* Sets the gap between the cards */
+    padding: 1rem; /* Padding around the entire grid */
+  }
+  
+  .currency-card {
+    background-color: #1B2028; 
+    border-radius: 1rem; 
+    color: white; 
+    width: 328px;
+    height: 200px;
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space vertically between items */
+  }
+  
+  .card-header {
+    background-color: #31353F;
+    width: 44px; 
+    height: 44px; 
+    display: flex;
+    margin-right: 1rem; 
+    border-radius: 10px;
+    align-items: center; /* Aligns items vertically in the center */
+  }
+  
+  .card-header img {
+    padding-left: 10px;
+    margin-right: 0.5rem; 
+  }
+  
+  .card-header div {
+    flex-grow: 1; 
+  }
+  
+  .card-header h2 {
+    font-size: 1.2rem; 
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+  }
+  
+  .card-header h2::after {
+    content: '▲';
+    font-size: 0.8rem;
+    padding-left: 100px;
+    color: #1ECB4F; 
+  }
+
+  .card-header p {
+    font-size: 1rem; 
+    color: #9e9e9e; 
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 40px;
+  }
+  
+  .card-body p {
+    font-size: 1.5rem; 
+    margin: 0.5rem 0; 
+    padding-bottom: 10%;
+  }
+  
+  .price-change {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: relative; 
+  }
+
+  .price-change.positive {
+    color: #1ECB4F; 
+    padding-bottom: 10%;
+  }
+
+  .progress-bar img {
+    position: absolute;
+    padding-left: 9%;
+    top: 23%;
+  }
+
+
+/* ================================================================= */
+
+/* Styles for Credit Card */
+.credit-card {
+    background: linear-gradient(25deg, #1e5799 0%, #2989d8 50%, #207cca 75%, #7db9e8 100%);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 355px;
+    height: 180px;
+    margin-left: 2%;
+   margin-top: 2%;
+  }
+  
+  .credit-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .credit-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .chip-icon {
+    width: 50px; /* or your specific dimensions */
+  }
+  
+  .credit-card-number {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  .credit-card-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .credit-card-holder {
+    font-size: 0.8rem;
+  }
+  
+
+.viza-text {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    color: #fff; 
+    font-weight: bold; 
+
+  }
+  
+
+  /* Chart Section Styles */
+  .chart-container {
+    background-color: #1B2028; 
+    padding: 24px; 
+    border-radius: 10px; 
+    margin-left: 30%;
+    margin-top: -10%;
+    width: 67%;
+    height: 441px;
+    color: #8FA1B3; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; /* Space below the header */
+  }
+  
+  .chart-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF; /* White color for the title */
+  }
+  
+  .chart-currency {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .chart-currency .currency-value {
+    font-weight: bold;
+    color: #FFFFFF; /* White color for the currency value */
+  }
+  
+  .chart-timeframes button {
+    background: none;
+    border: none;
+    color: #8FA1B3; /* Light gray text color for buttons */
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .chart-timeframes button.active {
+    background-color: #3050A4; /* Blue background for the active timeframe */
+    color: #FFFFFF; /* White text color for the active timeframe */
+  }
+  
+  .currency-toggle button {
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF; /* White text color for the currency toggle button */
+  }
+  
+  .currency-toggle button.active {
+    background-color: #3050A4; /* Blue background for the active currency button */
+  }
+  
+  .chart-body {
+    position: relative;
+  }
+  
+  .chart-body img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Styling for the axis labels */
+  .axis-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px; /* Padding on both sides */
+  }
+  
+  .axis-labels span {
+    font-size: 12px; /* Smaller font size for the axis labels */
+  }
+  
+  /* Left axis labels */
+  .y-axis-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 24px; /* Positioning from the top */
+    left: 24px; /* Positioning from the left */
+  }
+  
+  /* Bottom axis labels */
+  .x-axis-labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 24px; /* Positioning from the bottom */
+    left: 0;
+    right: 0;
+    padding: 0 24px; /* Padding on both sides */
+  }
+  
+  .x-axis-labels span {
+    text-align: center; /* Center the labels */
+  }
+  
