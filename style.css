@@ -465,4 +465,90 @@ body {
   .x-axis-labels span {
     text-align: center; /* Center the labels */
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium screens (tablets, small desktops) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Smaller sidebar for tablet */
+  }
+
+  .sidebar-logo img {
+    max-width: 40%; /* Smaller logo on medium screens */
+  }
+
+  .header .search-container input[type="search"] {
+    width: 300px; /* Smaller search bar on medium screens */
+  }
+
+  .chart-container {
+    margin-left: 10%; /* Adjust as necessary */
+    width: 80%; /* Larger width for chart container on smaller desktops */
+  }
+}
+
+/* Small screens (phones in portrait and landscape) */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column; /* Stack sidebar and main content */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width sidebar */
+    height: auto; /* Adjust height as per content */
+    position: relative; /* Adjust as necessary */
+  }
+
+  .sidebar ul li {
+    justify-content: center; /* Center align the sidebar items */
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for cards */
+  }
+
+  .currency-card {
+    width: auto; /* Adjust card width on small screens */
+    margin: 10px; /* Give some space around cards */
+  }
+
+  .chart-container {
+    margin-left: 0;
+    width: 100%; /* Full width chart container */
+    height: auto; /* Adjust height as per content */
+  }
+}
+
+/* Very small screens (smaller phones) */
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; /* One column for cards on very small screens */
+  }
+
+  .currency-card {
+    padding: 10px; /* Less padding inside cards */
+  }
+  
+  /* Adjust font sizes and padding for all elements inside the cards as needed */
+}
+
   
